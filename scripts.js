@@ -10,11 +10,15 @@ const ranges = player.querySelectorAll('.player__slider')
 // build our functions
 
 function togglePlay() {
-  if(video.pause) {
+ /* if(video.pause) {
     video.play()
   } else {
     video.pause()
   }
+} */
+
+const method = video.paused ? 'play' : 'pause'
+video[method]()
 }
 
 // hook up the listeneners 
